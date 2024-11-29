@@ -11,9 +11,9 @@ int main(void)
 
 void fundamentals(void)
 {
-     // Demostrate the string indexing. User input a string and retrieve a character 
+// V1
+    // Demostrate the string indexing. User repeatly input a string and retrieve a character 
     // at a specific position
-    // V1
     printf("*** Start of Indexing Strings Demo ***\n");
     char    buffer1[BUFFER_SIZE];
     char    numInput[NUM_INPUT_SIZE];
@@ -44,4 +44,22 @@ void fundamentals(void)
         }
     } while (strcmp(buffer1, "q") != 0);// repeat until user inputs q
     printf("*** End of Indexing Strings Demo ***\n\n");
+
+//V2
+    // Demostrate the string length measuring. User input a string and the program
+    // displays the length of the string. 
+    printf("*** Satrt of Measuring Strings Demo ***\n");
+    char buffer2[BUFFER_SIZE];// buffer to store the input
+    // user will be asked to input a string repeatedly
+    do{
+        printf("Type a string (q - to quit):\n");//// Prompt user to input a string
+        fgets(buffer2, BUFFER_SIZE, stdin);
+        //Remove a newline character at the end of the input 
+        buffer2[strlen(buffer2)-1] = '\0';
+        // Print out message to tell user the length of input string
+        if (strcmp(buffer2, "q") != 0)
+            printf("The length of \'%s\' is %d characters\n",buffer2, (int)strlen(buffer2));
+    }while (strcmp(buffer2, "q") != 0); // Check if the input is not equal to "q" to continue the loop
+    printf("*** End of Measuring Strings Demo ***\n\n");
+
 }

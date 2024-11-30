@@ -62,4 +62,23 @@ void fundamentals(void)
     }while (strcmp(buffer2, "q") != 0); // Check if the input is not equal to "q" to continue the loop
     printf("*** End of Measuring Strings Demo ***\n\n");
 
+//V3
+    //Demostrate how to copy strings from a source to a destination 
+    printf("*** Start of Copying String demo ***\n");
+    char destination[BUFFER_SIZE];// copy user's input to this destination
+    char source[BUFFER_SIZE];// store user's input
+    do{
+        destination[0] = '\0';
+        printf("Destination string is reset to empty\n");// reset the destination empty
+        printf("Type the source string (q - to quit):\n");// prompt user for a source string
+        fgets(source, BUFFER_SIZE, stdin);//read user input
+        source[strlen(source) - 1] = '\0';//remove newline character
+        //copy the source to destination as long as input is not "q"
+        if (strcmp(source, "q") != 0) {
+            strcpy(destination, source);
+            printf("New destination string is \'%s\'\n", destination);    
+        }
+    }while (strcmp(source, "q") != 0);//continues until the user enters 'q' to quit
+    printf("*** End of Coping Strings Demo ***\n\n");
+
 }

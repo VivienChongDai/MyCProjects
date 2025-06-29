@@ -12,8 +12,8 @@ int main(void)
 void fundamentals(void)
 {
 // V1
-    // Demostrate the string indexing. User repeatly input a string and retrieve a character 
-    // at a specific position
+    // Demostrate the string indexing. User repeatly input a string 
+    // and retrieve a character at a specific position
     printf("*** Start of Indexing Strings Demo ***\n");
     char    buffer1[BUFFER_SIZE];
     char    numInput[NUM_INPUT_SIZE];
